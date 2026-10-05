@@ -1,0 +1,42 @@
+﻿@model TechStoreCatalog.Models.ProductItem
+
+@{
+    ViewBag.Title = "Product Information";
+}
+
+<h2>Product Information</h2>
+
+<div>
+    <p>
+        <strong>Product ID:</strong>
+        @Model.Id
+    </p>
+
+    <p>
+        <strong>Product Name:</strong>
+        @Model.Name
+    </p>
+
+    <p>
+        <strong>Category:</strong>
+        @Model.Category
+    </p>
+
+    <p>
+        <strong>Price:</strong>
+        ₹@Model.Price
+    </p>
+
+    <p>
+        <strong>Description:</strong>
+        @Model.Details
+    </p>
+</div>
+
+<p>
+    @Html.ActionLink(
+        "Back to Catalog",
+        "Index",
+        "Catalog"
+    )
+</p>
